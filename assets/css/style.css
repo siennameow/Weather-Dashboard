@@ -1,5 +1,5 @@
 :root {
-    --primary: #a3c5e1;
+    --primary: #b5ccdf;
     --secondary: #509ad7;
     --tertiary: #79a3c8;
     --light-dark: #4b74a5;
@@ -148,4 +148,8 @@ main {
 
 .five-day {
     display:flex;
+}
+
+.subtitle {
+    display:none;
 }

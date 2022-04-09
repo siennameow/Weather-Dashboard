@@ -14,10 +14,11 @@ function addResult(){
     searchCity.text(inputCity) 
     searchCity.addClass("h4")
 
+    
     if (historyList.includes(inputCity) === false){
         $(".history").append(searchCity)
     }
-    // $(".history").append(searchCity)
+    $(".subtitle").attr("style","display:inline")
     addInfo(inputCity);
     
 }; 
