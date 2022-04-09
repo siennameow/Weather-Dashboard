@@ -108,13 +108,13 @@ function getResult(){
             uvIndex.addClass("d-flex")
             
             if (data.current.uvi < 3){
-                uvi.attr("style","backgroundcolor: green")
+                uvi.attr("style","background-color:green; color:black; margin-left: 3px")
             } else if (data.current.uvi < 6){
-                uvi.attr("style","background-color: yellow")
+                uvi.attr("style","background-color:yellow; color:black; margin-left: 3px")
             } else if (data.current.uvi < 8){
-                uvi.attr("style","background-color: orange")
+                uvi.attr("style","background-color:orange; color:black; margin-left: 3px")
             } else {
-                uvi.attr("style","background-color:red")
+                uvi.attr("style","background-color:red; color:black; margin-left: 3px")
             }
 
             // WHEN I view future weather conditions for that city
