@@ -52,7 +52,7 @@ function getResult(){
     icon.addClass("icon");    
     var dateTime = $("<div>")
 
-   
+    $(".city").addClass("list-group")
     $(".city").append(cityName)    
     $(".city").append(dateTime)    
     $(".city").append(icon)    
