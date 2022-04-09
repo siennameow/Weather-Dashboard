@@ -121,8 +121,10 @@ function getResult(){
                 uvi.attr("style","background-color:yellow; color:black; margin-left: 5px")
             } else if (data.current.uvi < 8){
                 uvi.attr("style","background-color:orange; color:black; margin-left: 5px")
-            } else {
+            } else if (data.current.uvi < 11) {
                 uvi.attr("style","background-color:red; color:black; margin-left: 5px")
+            } else {
+                uvi.attr("style","background-color:purple; color:black; margin-left: 5px")
             }
 
             // WHEN I view future weather conditions for that city
