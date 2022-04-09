@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Weather Dashboard</title>
+</head>
+
+<body class="flex-column min-100-vh">
+  <header class="hero">
+    <h1 class="app-title">
+      <i class="fas fa-cloud-sun-rain"></i> Weather Dashboard
+    </h1>
+</header>
+
+
+<main class="flex-row justify-space-between">
+    <div class="col-4 float-left">
+
+      <div class="card">
+        <h3 class="card-header text-uppercase">Search for a city</h3>
+        <form id="user-form" class="card-body">
+          <input type="text" id="myInput" placeholder="City Name..."/>
+          <button type="submit" class="btn" id="searchBtn">Search</button>
+        </form>
+      </div>
+
+      <div class="card history">
+        <h3 class="card-header text-uppercase">Search History</h3>
+        <div class="card-body"></div>
+      </div>
+    </div>
+
+    <div class="col-8 float-right">
+      <div>
+        <h2 class="subtitle">Check weather</h2>
+        <div class="list-group city"></div>
+      </div>
+
+      <div>
+        <h2 class="subtitle">5 Day forcast</h2>
+        <div class="list-group 5day"></div>
+      </div>
+    </div>
+
+ 
+</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>
