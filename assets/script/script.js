@@ -69,7 +69,7 @@ function getResult(){
     $(".city").append(uvIndex)
     
     
-    var geoUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + cityCode + "," + countryCode + "&limit=5&appid=7d1b285353ccacd5326159e04cfab063"
+    var geoUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + cityCode + "," + countryCode + "&limit=5&appid=7d1b285353ccacd5326159e04cfab063"
         
     //We then pass the requestUrl variable as an argument to the fetch() method, like in the following code:    
       fetch(geoUrl)
