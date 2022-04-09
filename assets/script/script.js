@@ -13,7 +13,8 @@ function addResult(){
     searchCity.text(inputCity) 
     searchCity.addClass("h4")
     $(".history").append(searchCity)
-    //console.log(inputCity)
+    addInfo(inputCity);
+    
 }; 
 
 //add event listener to search history item
@@ -108,13 +109,13 @@ function getResult(){
             uvIndex.addClass("d-flex")
             
             if (data.current.uvi < 3){
-                uvi.attr("style","background-color:green; color:black; margin-left: 3px")
+                uvi.attr("style","background-color:green; color:black; margin-left: 5px")
             } else if (data.current.uvi < 6){
-                uvi.attr("style","background-color:yellow; color:black; margin-left: 3px")
+                uvi.attr("style","background-color:yellow; color:black; margin-left: 5px")
             } else if (data.current.uvi < 8){
-                uvi.attr("style","background-color:orange; color:black; margin-left: 3px")
+                uvi.attr("style","background-color:orange; color:black; margin-left: 5px")
             } else {
-                uvi.attr("style","background-color:red; color:black; margin-left: 3px")
+                uvi.attr("style","background-color:red; color:black; margin-left: 5px")
             }
 
             // WHEN I view future weather conditions for that city
@@ -154,9 +155,38 @@ function getResult(){
     })
 }
 
-// WHEN I view future weather conditions for that city
-// THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-
-
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
+
+//get local storage info
+function getInfo() {
+    var currentList =localStorage.getItem("city");
+    if (currentList !== null ){
+        freshList = JSON.parse(currentList);
+        return freshList;
+    } else {
+        freshList = [];
+    }
+    return freshList;
+}
+//add info to local
+function addInfo (n) {
+    var addedList = getInfo();
+    addedList.push(n);
+    localStorage.setItem("city", JSON.stringify(addedList));
+};
+//render history
+function renderInfo () {
+    var historyList = getInfo();
+    for (var i = 0; i < historyList.length; i++) {
+        var inputCity = historyList[i];
+        var searchCity =$("<div>") 
+        searchCity.attr('id',inputCity) 
+        searchCity.text(inputCity) 
+        searchCity.addClass("h4")
+        $(".history").append(searchCity)
+    }
+};
+
+renderInfo();
+
