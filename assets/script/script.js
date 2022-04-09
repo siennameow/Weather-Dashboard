@@ -80,27 +80,42 @@ function getResult(){
           })
           .then(function (data) {
             console.log(data)
+            
             weatherIcon= data.current.weather[0].icon;
             imgSrc = "https://openweathermap.org/img/wn/" + weatherIcon + ".png";
             icon.attr('src',imgSrc)
         
             cityName.text(cityCode);
+            var date = new Date(data.current.dt * 1000);
+            dateTime.text("("+ (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() + ")");
+
             temp.text("Temperature: "+ data.current.temp + " F");
             humidity.text("Humidity: " + data.current.humidity + " %");
             wind.text("Wind Speed: " + data.current.wind_speed + " MPH");
-            uvIndex.text("UV Index: " + data.current.uvi);
-            // console.log(data.current.uvi)
-                
-            var date = new Date(data.current.dt * 1000);
-            dateTime.text("("+ (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() + ")");
+
+            // WHEN I view the UV index
+            // THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe    
+            var uvi =$("<div>")
+            uvIndex.text("UV Index: ");
+            uvi.text(data.current.uvi)
+            uvIndex.append(uvi)
+            uvIndex.addClass("d-flex")
+            
+            if (data.current.uvi < 3){
+                uvi.attr("style","backgroundcolor: green")
+            } else if (data.current.uvi < 6){
+                uvi.attr("style","background-color: yellow")
+            } else if (data.current.uvi < 8){
+                uvi.attr("style","background-color: orange")
+            } else {
+                uvi.attr("style","background-color:red")
+            }
           })
     })
 }
 
-
 // WHEN I view the UV index
 // THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-
 
 // WHEN I view future weather conditions for that city
 // THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
