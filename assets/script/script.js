@@ -8,11 +8,16 @@
 function addResult(){
 
     inputCity = document.getElementById("myInput").value;  
+    historyList = getInfo();
     var searchCity =$("<div>") 
     searchCity.attr('id',inputCity) 
     searchCity.text(inputCity) 
     searchCity.addClass("h4")
-    $(".history").append(searchCity)
+
+    if (historyList.includes(inputCity) === false){
+        $(".history").append(searchCity)
+    }
+    // $(".history").append(searchCity)
     addInfo(inputCity);
     
 }; 
@@ -85,7 +90,7 @@ function getResult(){
             return response.json();
           })
           .then(function (data) {
-            console.log(data)
+            // console.log(data)
             
             weatherIcon= data.current.weather[0].icon;
             imgSrc = "https://openweathermap.org/img/wn/" + weatherIcon + ".png";
@@ -172,7 +177,11 @@ function getInfo() {
 //add info to local
 function addInfo (n) {
     var addedList = getInfo();
-    addedList.push(n);
+
+    if (historyList.includes(inputCity) === false){
+        addedList.push(n);
+    }
+   
     localStorage.setItem("city", JSON.stringify(addedList));
 };
 //render history
@@ -184,6 +193,7 @@ function renderInfo () {
         searchCity.attr('id',inputCity) 
         searchCity.text(inputCity) 
         searchCity.addClass("h4")
+
         $(".history").append(searchCity)
     }
 };
