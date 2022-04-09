@@ -2,9 +2,9 @@
 
 ## Description 📝 
 
-This weather dashboard provides updated weather data and forecasting to help you anticipate and prepare for your trip. Factoring weather into your travel is difficult, but important. We are here to help you make more confident and informed decisions. The application leverages OpenWeather API to pull weather and forecast informaton for cities across the US. 
+Factoring weather into your travel is difficult, but important. We are here to help you make more confident and informed decisions. The application leverages [OpenWeather API](https://openweathermap.org/api) to pull weather and forecast informaton for cities across the US and provides updated weather data and forecasting to help you anticipate and prepare for your trip. 
 
-Enter in your city of choice and select search to view the current weatherand forecast for the next five(5) days.UV Index will be accompanied by a color indicating the severity of the index. Previous searches are saved in localStorage and search historys are available as buttons in order for easy access and re-searching of weather and forecasts. [OpenWeather API](https://openweathermap.org/api) is used to retrieve weather data for cities. And localStorage is used to store persistent data.
+Enter in your city of choice and select search to view the current weatherand forecast for the next five(5) days.UV Index will be accompanied by a color indicating the severity of the index. Previous searches are saved in localStorage and search historys are available as buttons in order for easy access and re-searching of weather and forecasts.
 
 The webpage is easy for you to access through one link : https://siennameow.github.io/Weather-Dashboard/ and is designed to work with different screen sizes as you need.
 
@@ -24,7 +24,7 @@ Plan your trip now using Weather Dashboard!
 ## Webpage Preview ⭐
  
  
-
+![Weather Dashboard](https://user-images.githubusercontent.com/101283174/162595028-ba429cc3-6716-4495-9ce5-182d211419a1.gif)
 
 
 
@@ -40,11 +40,11 @@ Plan your trip now using Weather Dashboard!
     - Wind speed
     - UV index
 - The UV index is presented with a color indicating severity (reference: https://en.wikipedia.org/wiki/Ultraviolet_index)
-    - #3EA72D 0-2 Low
-    - #FFF300 3-5 Moderate
-    - #F18B00 6-7 Orange 
-    - #E53210 8-10 Very High
-    - #B567A4 11+ Extreme
+    - 🟩  0-2 Low
+    - 🟨  3-5 Moderate
+    - 🟧  6-7 High 
+    - 🟥  8-10 Very High
+    - 🟪  11+ Extreme
 - 5-day forecast will be presented with the following information:
     - Date
     - An icon representation of weather conditions
