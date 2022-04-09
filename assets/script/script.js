@@ -86,6 +86,7 @@ function getResult(){
             icon.attr('src',imgSrc)
         
             cityName.text(cityCode);
+            //translate utc to date
             var date = new Date(data.current.dt * 1000);
             dateTime.text("("+ (date.getMonth()+1) + "/" + date.getDate() + "/" + date.getFullYear() + ")");
 
@@ -110,12 +111,42 @@ function getResult(){
             } else {
                 uvi.attr("style","background-color:red")
             }
+
+            // WHEN I view future weather conditions for that city
+            // THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+            //using the data from previous fetch and display the 5 day weather data
+            for (var i=1;i<6;i++){
+
+                var blueContainer = $("<div>")
+                this["futureDate"+i] = $("<h>")
+                this["futureIcon"+i] = $("<img>")
+                this["futureTemp"+i] = $("<div>")
+                this["futureWind"+i] = $("<div>")
+                this["futureHumidity"+i] = $("<div>")
+                //translate utc to date
+                this["forecastDay"+i] = new Date(data.daily[i].dt * 1000);     
+     
+                (this["futureDate"+i]).text(((this["forecastDay"+i]).getMonth()+1) + "/" + (this["forecastDay"+i]).getDate() + "/" + (this["forecastDay"+i]).getFullYear());
+                (this["futureTemp"+i]).text("Temperature: "+ data.daily[i].temp.day + " F");
+                (this["futureWind"+i]).text("Wind: "+ data.daily[i].wind_speed+ " MPH");
+                (this["futureHumidity"+i]).text("Humidity: " + data.daily[i].humidity + " %");
+                (this["weatherIcon"+i])= data.daily[i].weather[0].icon;
+        
+                DateimgSrc = "https://openweathermap.org/img/wn/" + (this["weatherIcon"+i]) + ".png";  
+                (this["futureIcon"+i]).attr('src',DateimgSrc)
+
+                $(".five-day").append(blueContainer)
+                blueContainer.append((this["futureDate"+i]));
+                blueContainer.append((this["futureIcon"+i]));
+                blueContainer.append((this["futureTemp"+i]));
+                blueContainer.append((this["futureWind"+i]));
+                blueContainer.append((this["futureHumidity"+i]));
+
+            }
+
           })
     })
 }
-
-// WHEN I view the UV index
-// THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
 
 // WHEN I view future weather conditions for that city
 // THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
