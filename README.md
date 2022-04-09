@@ -15,7 +15,7 @@ Plan your trip now using Weather Dashboard!
 
 * [Webpage Preview ⭐](#webpage-preview-)
 * [Code-Snippet 💻](#code-snippet-)
-* [Custom-Features 📋](#custom-features-)
+* [Features 📋](#custom-features-)
 * [Skill-Improved 📚](#skill-improved-)
 * [Technologies 🔧](#technologies-)
 * [Authors 👩](#authors-)
@@ -28,7 +28,7 @@ Plan your trip now using Weather Dashboard!
 
 
 
-## Custom Features 📋
+## Features 📋
 
 - Searched for a city, the current and future conditions for that city will be presented and that city is added to the search history
 - The current weather conditions for the city including:
