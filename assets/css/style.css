@@ -31,6 +31,8 @@ h1, h2, h3, h4, h5, h6 {
 main {
     margin: 20px auto;
     width: 94%;
+    min-height:100%;
+    overflow: auto;
 }
 
 .btn {
@@ -152,4 +154,11 @@ main {
 
 .subtitle {
     display:none;
+}
+
+#footer {
+    position: relative;
+    margin-top: 100px;
+    display:flex;
+    justify-content: center;
 }
