@@ -11,6 +11,7 @@ function addResult(){
     var searchCity =$("<div>") 
     searchCity.attr('id',inputCity) 
     searchCity.text(inputCity) 
+    searchCity.addClass("h4")
     $(".history").append(searchCity)
     //console.log(inputCity)
 }; 
@@ -32,7 +33,7 @@ function getResult(){
 
     $(".five-day").empty();
     $(".city").empty()
-    
+
    inputCity = document.getElementById("myInput").value;   
     var countryCode='US';    
     var cityCode=inputCity;       
@@ -41,6 +42,7 @@ function getResult(){
     var geoLat;
         
     var cityName =$("<h>")    
+    cityName.addClass("h3")  
     var temp = $("<div>")    
     var wind = $("<div>")    
     var humidity = $("<div>")   
@@ -145,6 +147,7 @@ function getResult(){
                 blueContainer.append((this["futureWind"+i]));
                 blueContainer.append((this["futureHumidity"+i]));
 
+                blueContainer.addClass("weather-card")
             }
 
           })
