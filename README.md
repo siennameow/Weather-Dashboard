@@ -1,4 +1,5 @@
 # Weather-Dashboard
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/Weather-Dashboard/blob/main/LICENSE)
 
 ## Description 📝 
 
@@ -18,6 +19,7 @@ Plan your trip now using Weather Dashboard!
 * [Features 📋](#custom-features-)
 * [Skill-Improved 📚](#skill-improved-)
 * [Technologies 🔧](#technologies-)
+* [License 📜](#license-)
 * [Authors 👩](#authors-)
 * [Credits 🙌](#credits-)
 
@@ -143,6 +145,9 @@ $(".history").on('click', function(event){
 * [jQuery](https://jquery.com/)
 * [Bootstrap](https://getbootstrap.com/)
 * [Font Awesome](https://fontawesome.com/)
+
+## License 📜
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/siennameow/Weather-Dashboard/blob/main/LICENSE)
 
 ## Authors 👩
 
