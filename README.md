@@ -25,7 +25,7 @@ Plan your trip now using Weather Dashboard!
 
 ## Webpage Preview ⭐
 
-![weather](https://user-images.githubusercontent.com/101283174/171314818-e8a59380-02c9-4088-9166-b46f35f35839.png)
+![weather](https://user-images.githubusercontent.com/101283174/171314918-6da98e4c-4f31-4b5b-b9ef-e4dc4fa2bed6.png)
 
 ## Features 📋
 
