@@ -24,11 +24,8 @@ Plan your trip now using Weather Dashboard!
 * [Credits 🙌](#credits-)
 
 ## Webpage Preview ⭐
- 
- 
-![Weather Dashboard](https://user-images.githubusercontent.com/101283174/162595028-ba429cc3-6716-4495-9ce5-182d211419a1.gif)
 
-
+![weather](https://user-images.githubusercontent.com/101283174/171314818-e8a59380-02c9-4088-9166-b46f35f35839.png)
 
 ## Features 📋
 
